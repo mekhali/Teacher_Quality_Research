@@ -30,7 +30,7 @@ combined_cleaned <- combined %>%
                                  school_name == "Ruffner School" ~ "Ruffner School Middle",
                                  TRUE ~ school_name)) %>% 
   filter(str_detect(school_name, "Middle|Intermediate|Secondary|High|6-12")) %>% 
-  filter(!str_detect(school_name, "Elementary|Primary")) %>% 
+  filter(!str_detect(school_name, "Elementary|Primary"))
 
 #Note: When determining which non-traditional schools to remove, in addition to combing through the data set, and searching for lists of charter, magnet, and lab schools online
 #I also used this filter function to find schools that didn't fit the traditional elementary, middle, high
